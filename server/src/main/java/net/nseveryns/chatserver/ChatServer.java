@@ -8,7 +8,7 @@ import net.nseveryns.chatserver.net.PipelineInitializer;
 
 public class ChatServer {
 
-    protected ChatServer() {
+    protected ChatServer(int port) {
         EventLoopGroup group = new NioEventLoopGroup();
         ServerBootstrap bootstrap = new ServerBootstrap();
         {
@@ -17,7 +17,7 @@ public class ChatServer {
             bootstrap.childHandler(new PipelineInitializer());
         }
         try {
-            bootstrap.bind(14732).sync().channel().closeFuture().sync();
+            bootstrap.bind(port).sync().channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
