@@ -7,7 +7,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import net.nseveryns.chatclient.gui.ChatWindow;
-import net.nseveryns.chatclient.netty.PipelineInitializer;
+import net.nseveryns.chatclient.net.PipelineInitializer;
 
 import javax.swing.JOptionPane;
 import java.net.InetSocketAddress;

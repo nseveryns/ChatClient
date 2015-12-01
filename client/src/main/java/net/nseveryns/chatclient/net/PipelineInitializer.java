@@ -1,4 +1,4 @@
-package net.nseveryns.chatclient.netty;
+package net.nseveryns.chatclient.net;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
