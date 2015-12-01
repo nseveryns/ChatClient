@@ -17,8 +17,8 @@ public class ChatClient {
     private final ChatWindow window;
 
     protected ChatClient() {
-        String host = JOptionPane.showInputDialog("Host");
-        int port = Integer.parseInt(JOptionPane.showInputDialog("Port"));
+        String host = JOptionPane.showInputDialog("Host", "localhost");
+        int port = Integer.parseInt(JOptionPane.showInputDialog("Port", 14732));
 
         this.group = new NioEventLoopGroup();
         ChannelFuture connect = new Bootstrap()
