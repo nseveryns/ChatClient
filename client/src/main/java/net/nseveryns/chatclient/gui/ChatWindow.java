@@ -1,6 +1,8 @@
 package net.nseveryns.chatclient.gui;
 
 import io.netty.channel.Channel;
+import net.nseveryns.chatclient.themes.Theme;
+import net.nseveryns.chatclient.themes.ThemeLoader;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,6 +21,8 @@ public class ChatWindow extends JFrame {
     private final JTextArea textArea;
 
     public ChatWindow(Channel channel) {
+        Theme theme = ThemeLoader.getInstance().getTheme();
+
         this.channel = channel;
         this.setTitle("ChatClient");
         this.setResizable(true);
